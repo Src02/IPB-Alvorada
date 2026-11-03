@@ -18,13 +18,16 @@
   <header class="site-header">
     <div class="wrap bar">
       <a href="#topo" class="logo"><i class="fa-solid fa-church"></i> IPB Alvorada</a>
-      <nav aria-label="Principal">
-        <a href="#conectar">Conecte-se</a>
-        <a href="#ministerios">Ministérios</a>
-        <a href="#localizacao">Localização</a>
-        <a href="#redes">Redes e podcast</a>
+      <div class="bar-end">
+        <nav id="nav" aria-label="Principal">
+          <a href="#conectar">Conecte-se</a>
+          <a href="#ministerios">Ministérios</a>
+          <a href="#localizacao">Localização</a>
+          <a href="#redes">Redes e podcast</a>
+        </nav>
         <a href="https://youtube.com" class="nav-live" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-circle"></i> Ao vivo</a>
-      </nav>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
     </div>
   </header>
 
@@ -105,6 +108,34 @@
         <div class="loc-info reveal">
           <h2>Venha nos visitar</h2>
           <p class="loc-lead">Estamos no Jardim Alvorada, em Maringá. Será uma alegria receber você.</p>
+          <div class="hours" id="hours">
+            <h3><i class="fa-regular fa-clock"></i> Horário de funcionamento</h3>
+            <div class="now" id="hoursNow" aria-live="polite" hidden>
+              <span class="now-dot" aria-hidden="true"></span>
+              <div class="now-txt">
+                <strong id="nowTitle"></strong>
+                <span id="nowSub"></span>
+              </div>
+              <div class="now-bar" id="nowBar" aria-hidden="true"><i></i></div>
+            </div>
+            <dl>
+              <div data-dia="1" data-h="08:30-11:30"><dt>Segunda-feira</dt><dd>08:30–11:30</dd></div>
+              <div data-dia="2" data-h="08:30-11:30"><dt>Terça-feira</dt><dd>08:30–11:30</dd></div>
+              <div data-dia="3" data-h="08:30-11:30"><dt>Quarta-feira</dt><dd>08:30–11:30</dd></div>
+              <div data-dia="4" data-h="08:30-11:30"><dt>Quinta-feira</dt><dd>08:30–11:30</dd></div>
+              <div data-dia="5" data-h="08:30-11:30"><dt>Sexta-feira</dt><dd>08:30–11:30</dd></div>
+              <div data-dia="6" data-h="08:00-12:00,18:30-21:00"><dt>Sábado</dt><dd><span>08:00–12:00</span><span>18:30–21:00</span></dd></div>
+              <div data-dia="0" data-h="09:00-12:30,18:00-21:00"><dt>Domingo</dt><dd><span>09:00–12:30</span><span>18:00–21:00</span></dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="loc-where reveal">
+          <div class="map">
+            <button class="map-facade" id="mapFacade" data-q="Alameda Dr. João Paulino Vieira Filho, 106, Maringá PR" aria-label="Carregar o mapa com a localização da igreja">
+              <span class="map-pin"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="chip">Ver mapa aqui</span>
+            </button>
+          </div>
           <address>
             <span class="pin"><i class="fa-solid fa-location-dot"></i></span>
             <span>
@@ -115,12 +146,6 @@
             </span>
           </address>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Alameda+Dr.+Jo%C3%A3o+Paulino+Vieira+Filho%2C+106%2C+Maring%C3%A1+PR" class="btn btn-navy" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-diamond-turn-right"></i> Como chegar</a>
-        </div>
-        <div class="map reveal">
-          <button class="map-facade" id="mapFacade" data-q="Alameda Dr. João Paulino Vieira Filho, 106, Maringá PR" aria-label="Carregar o mapa com a localização da igreja">
-            <span class="map-pin"><i class="fa-solid fa-location-dot"></i></span>
-            <span class="chip">Ver mapa aqui</span>
-          </button>
         </div>
       </div>
     </section>
